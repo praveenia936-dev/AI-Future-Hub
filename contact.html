@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - AI Future Hub</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: #0b0f1a;
+            color: white;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .glow {
+            color: #00e5ff;
+            text-shadow: 0 0 10px #00e5ff;
+        }
+
+        .form-section {
+            padding: 60px 20px;
+            flex: 1;
+            background: radial-gradient(circle, #1b2a4a, #0b0f1a);
+        }
+
+        .contact-card {
+            background: #121a2a;
+            border: none;
+            border-radius: 12px;
+            max-width: 500px;
+            margin: 0 auto;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+        }
+
+        .form-control-custom {
+            background-color: #0b0f1a;
+            border: 1px solid rgba(0, 229, 255, 0.2);
+            color: white;
+            border-radius: 6px;
+            padding: 12px;
+            width: 100%;
+            outline: none;
+        }
+
+        .form-control-custom:focus {
+            border-color: #00e5ff;
+            background-color: #0b0f1a;
+            color: white;
+            box-shadow: 0 0 8px rgba(0, 229, 255, 0.3);
+        }
+
+        .btn-glow {
+            background-color: #00e5ff;
+            color: #0b0f1a;
+            font-weight: bold;
+            border-radius: 6px;
+            border: none;
+            transition: 0.3s;
+        }
+
+        .btn-glow:hover {
+            background-color: #00b6cc;
+            box-shadow: 0 0 12px #00e5ff;
+            color: #0b0f1a;
+        }
+
+        label {
+            color: #cbd5e1;
+            font-weight: 500;
+            font-size: 0.9rem;
+        }
+
+        /* Mobile tweaks */
+        @media (max-width: 576px) {
+            .navbar .container {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .navbar-brand {
+                margin-right: 0;
+                margin-bottom: 12px;
+            }
+
+            .form-section {
+                padding: 30px 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand glow" href="index.html">AI Future Hub</a>
+            <div>
+                <a class="btn btn-outline-info btn-sm" href="index.html">Home</a>
+                <a class="btn btn-outline-info btn-sm" href="about.html">About AI</a>
+                <a class="btn btn-outline-info btn-sm active" href="contact.html">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="form-section">
+        <div class="container">
+            <div class="text-center mb-4">
+                <h1 class="glow">Get In Touch</h1>
+                <p style="color: #94a3b8;">Drop a message to connect with the AI Future Hub portal.</p>
+            </div>
+
+            <div class="card contact-card p-4">
+                <form onsubmit="event.preventDefault(); alert('Message sent successfully!');">
+                    <div class="form-group">
+                        <label>Name</label>
+                        <input type="text" class="form-control-custom" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Email Address</label>
+                        <input type="email" class="form-control-custom" placeholder="name@example.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Contact Number</label>
+                        <input type="tel" class="form-control-custom" placeholder="e.g. +65 9123 4567" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Message</label>
+                        <textarea class="form-control-custom" rows="4" placeholder="Type your notes here..."
+                            required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-glow btn-block mt-4 py-2">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
